@@ -1,6 +1,5 @@
-package org.example.programmers;
+package org.example.programmers.ExhaustiveSearch;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 

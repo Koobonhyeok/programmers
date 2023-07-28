@@ -1,4 +1,4 @@
-package org.example.programmers;
+package org.example.programmers.ExhaustiveSearch;
 
 public class LengthAndWidth {
 

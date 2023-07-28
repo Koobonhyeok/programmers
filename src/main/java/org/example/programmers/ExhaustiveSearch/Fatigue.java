@@ -1,4 +1,4 @@
-package org.example.programmers;
+package org.example.programmers.ExhaustiveSearch;
 
 public class Fatigue {
     static boolean[] visited;
@@ -20,17 +20,18 @@ public class Fatigue {
 
     private static void dfs( int depth, int fatigue, int[][] dungeons){
         for (int i = 0; i < dungeons.length; i++){
-            System.out.println( "Visited status :: "+ visited[i] +"// dungeons Min F :: "+ dungeons[i][0] +"// Fatigue  :: " + fatigue  );
             if (visited[i] || dungeons[i][0] > fatigue) {
+//                System.out.println( i+ "Visited status :: "+ visited[i] +"// dungeons Min F :: "+ dungeons[i][0] +"// Fatigue  :: " + fatigue  );
                 continue;
             }
+            System.out.println("dd :: "+depth+ " :"+i+ "Visited status :: "+ visited[i] +"// dungeons Min F :: "+ dungeons[i][0] +"// Fatigue  :: " + fatigue +"  " + (dungeons[i][0] > fatigue)  );
+
             visited[i] = true;
             dfs(depth + 1, fatigue - dungeons[i][1], dungeons);
             visited[i] = false;
-
         }
 
-        System.out.println( "    depth     ::   "+depth  );
+//        System.out.println( "    depth     ::   "+depth  );
         count = Math.max(count, depth);
     }
 }

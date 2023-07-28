@@ -1,6 +1,4 @@
-package org.example.programmers;
-
-import java.util.Arrays;
+package org.example.programmers.ExhaustiveSearch;
 
 public class MinRectangle {
 
